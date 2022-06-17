@@ -1,0 +1,139 @@
+:root{
+    --fontColor: #626262;
+}
+
+/* about me */
+.about{
+    width: 95%;
+    height: 85vh;
+    border-radius: var(--borderRadius);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: white;
+    overflow: scroll;
+    overflow-x: hidden;
+
+}
+.about-me{
+    color: black;
+}
+.about-me p{
+    font-size: 1rem;
+    margin: 0;
+    padding: 1rem;
+    color: var(--fontColor);
+}
+.about-me-detail{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin-left: 1rem;
+    gap: .5rem;
+}
+.about-me-detail h3{
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.about-me-detail h3 span{
+    color: var(--fontColor);
+}
+
+/* tech stack */
+.about-tech{
+    color: black;
+}
+.curly-end::before{
+    margin-left: 1rem;
+    content: "} ;";
+    font-size: 1.2rem;
+}
+.about-tech h1{
+    margin: 0;
+    margin-left: 1rem;
+    padding-top: 1rem;
+    text-transform: capitalize;
+
+    font-size: 1rem;
+}
+.about-tech h1::after{
+    content: " {";
+    font-size: 1.2rem;
+}
+.about-tech-web,
+.about-tech-git{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30%;
+}
+.about-tech-web h2,
+.about-tech-git h2{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.about-tech-web h2:first-child,
+.about-tech-git h2:first-child {
+    font-size: 2rem;
+    animation: techFlick 2s linear infinite alternate;
+    transform-origin: bottom;
+    /* animation: myfirst 5s linear 2s infinite alternate; */
+}
+@keyframes techFlick {
+    from{
+        color: var(--lightBlue);
+    }
+    to{
+        color: var(--strongBlue);
+    }
+}
+
+.about-tech h2:last-child{
+    font-size: 1.2rem;
+    gap: 15px;
+    margin-left: .5rem;
+    color: var(--fontColor);
+}
+.about-tech h2:last-child span::before{
+    content: ': ';
+}
+
+/* looking for */
+.about-job{
+    color: black;
+}
+.about-job h2{
+    margin: 0;
+    padding: .5rem 0 .5rem 1rem;
+}
+.about-job ul{
+    padding: 0;
+    margin: 0;
+}
+.about-job ul li{
+    color: var(--fontColor);
+    text-indent: 2rem;
+    margin-bottom: .25rem;
+    list-style: none;
+}
+
+/* interesting */
+.about-interesting{
+    color: black;
+}
+.about-interesting ul{
+    padding: 0;
+    margin: 0;
+    padding-top: .5rem;
+    margin-bottom: 1rem;
+}
+.about-interesting ul li{
+    color: var(--fontColor);
+    list-style: none;
+    text-indent: 2rem;
+    margin-bottom: .25rem;
+}
+.about-interesting ul li::before{
+    content: "📚 ";
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import {
   ImGithub,
   ImTwitter,
@@ -7,14 +7,20 @@ import {
   ImArrowRight2,
 } from "react-icons/im";
 
-const Profile = () => {
+interface Props {
+  handleClick: (v: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+const Profile: FC<Props> = ({ handleClick }) => {
   return (
     <section className="profile">
       <div className="profile-header">
         <div className="profile-header-bg-img"></div>
         <div className="profile-header--shape"></div>
-        <div className="profile-header-img"></div>
-        <div className="profile-header-img--shadow"></div>
+        <div className="profile-haeder-main-pic-contain">
+          <div className="profile-header-img"></div>
+          <div className="profile-header-img--shadow"></div>
+        </div>
         <div className="profile-header-text-contain">
           <h1>kittichon phitakkiri</h1>
           <h2>junior software developer</h2>
@@ -29,7 +35,11 @@ const Profile = () => {
         <button className="btn profile-button__button">
           download cv <ImDownload3 className="profile-icon" />
         </button>
-        <button className="btn profile-button__button">
+        <button
+          className="btn profile-button__button"
+          name="contact"
+          onClick={(e) => handleClick(e)}
+        >
           contact me <ImArrowRight2 className="profile-icon" />
         </button>
       </div>

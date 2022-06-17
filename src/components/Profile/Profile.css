@@ -1,9 +1,16 @@
-.profile{
+:root{
+    --borderColor: rgba(226, 223, 223,.5);
     --borderRadius: 5px;
-
+}
+.profile{
+    display: flex;
+    flex-direction: column;
     width: 85%;
+    height: 95vh;
     background-color: white;
     border-radius: var(--borderRadius);
+
+    box-shadow: 2px 0 5px grey;
 }
 .profile-header {
     position: relative;
@@ -27,7 +34,7 @@
     padding: 12px;
     margin-bottom: 6px;
     height: 60px;
-    width: 100.1%;
+    width: 100%;
 
     --shapeBg: white;
     --shapeTop: -20px
@@ -52,7 +59,10 @@
     background: var(--shapeBg);
     transform: skew(0deg, -6deg);
   }
-
+.profile-haeder-main-pic-contain{
+    position: relative;
+    height: 50px;
+}
   .profile-header-img{
     width: 150px;
     height: 150px;
@@ -66,7 +76,7 @@
     border: 5px solid white;
 
     position: absolute;
-    top: 42%;
+    top: -150px;
     left: 50%;
     transform: translate(-50%);
 
@@ -80,7 +90,7 @@
     border-radius: 100%;
 
     position: absolute;
-    top: 43%;
+    top: -145px;
     left: 50%;
     transform: translate(-55%);
     z-index: 1;
@@ -131,7 +141,6 @@
     display: flex;
 }
 .btn.profile-button__button{
-    --borderButton: rgba(226, 223, 223,.5);
 
     display: flex;
     align-items: center;
@@ -141,13 +150,13 @@
     padding: 1rem 0;
     font-size: .8rem;
     flex-grow: 1;
-    border-top: 1px solid var(--borderButton);
+    border-top: 1px solid var(--borderColor);
     transition: var(--menuHoverdelay);
 }
 .btn.profile-button__button:hover{
-    background-color: var(--borderButton);
+    background-color: var(--borderColor);
     color: var(--blueSky);
 }
 .btn.profile-button__button:first-child{
-    border-right: 1px solid var(--borderButton);
+    border-right: 1px solid var(--borderColor);
 }

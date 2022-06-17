@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
 @import './components/Nav/Nav.css';
 @import './components/Profile/Profile.css';
+@import './pages/About/About.css';
+@import './components/Title/Title.css';
+@import './pages/Resume/Resume.css';
 
 * , ::before, ::after{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'ABeeZee', sans-serif;
 }
 :root {
     --darkBlue: #06283D;
@@ -25,10 +29,14 @@ body{
 }
 .home-left-side{
     display: flex;
+    position: relative;
     width: 50vw;
+    z-index: 2;
 }
 .home-right-side{
     width: 50vw;
+    position: relative;
+    z-index: 1;
 }
 .btn{
     border: none;
@@ -37,4 +45,37 @@ body{
     padding: 0;
 
     cursor: pointer;
+}
+
+/* Scrollbar with Hover Transition Effect */
+.scrollbar::-webkit-scrollbar {
+	width: 14px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+	background-clip: content-box;
+	border: 4px solid transparent;
+	border-radius: 7px;
+	box-shadow: inset 0 0 0 10px;
+}
+.scrollbar::-webkit-scrollbar-button {
+	width: 0;
+	height: 0;
+	display: none;
+}
+.scrollbar::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
+.scrollbar {
+	overflow: auto;
+	color: transparent;
+	transition: color 0.3s;
+
+}
+.scrollbar:hover {
+    color: var(--fontColor);
+}
+/* Scrollbar with Hover Transition Effect end*/
+.--border-left{
+    margin-left: 1rem;
+    border-left: 1px solid var(--borderColor);
 }

@@ -1,26 +1,30 @@
-import React from "react";
+import React, { FC } from "react";
 import { ImUser, ImProfile, ImStack, ImBubbles } from "react-icons/im";
 
-const Nav = () => {
+interface Props {
+  handleClick: (v: React.MouseEvent<HTMLButtonElement>) => void;
+}
+
+const Nav: FC<Props> = ({ handleClick }) => {
   return (
     <nav className="navigation">
       <ul className="menu">
-        <li>
+        <button className="btn" name="about" onClick={(e) => handleClick(e)}>
           <ImUser className="menu__icon" />
           <span>about</span>
-        </li>
-        <li>
+        </button>
+        <button className="btn" name="resume" onClick={(e) => handleClick(e)}>
           <ImProfile className="menu__icon" />
           <span>resume</span>
-        </li>
-        <li>
+        </button>
+        <button className="btn" name="projects" onClick={(e) => handleClick(e)}>
           <ImStack className="menu__icon" />
           <span>projects</span>
-        </li>
-        <li>
+        </button>
+        <button className="btn" name="contact" onClick={(e) => handleClick(e)}>
           <ImBubbles className="menu__icon" />
           <span>contact</span>
-        </li>
+        </button>
       </ul>
     </nav>
   );

@@ -1,0 +1,147 @@
+.resume{
+    width: 95%;
+    height: 85vh;
+    border-radius: var(--borderRadius);
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: white;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.exp-and-edu,
+.myskill,
+.mylanguage{
+    color: black;
+}
+.resume__icon {
+    width: 30px;
+    height: 30px;
+
+    color: var(--strongBlue);
+}
+
+
+.exp h1,
+.edu h1,
+.qualification h1,
+.myskill h1,
+.mylanguage h1{
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    
+    border-bottom: 1px solid var(--borderColor);
+}
+.exp-content,
+.edu-content,
+.qualification-content{
+    text-indent: 1rem;
+    color: var(--fontColor);
+    border-bottom: 1px solid var(--borderColor);
+}
+.exp-date,
+.edu-date,
+.qualification-date{
+    margin: 0;
+    margin: 1rem 0;
+    font-size: .8rem;
+    position: relative;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+
+    border-radius: 100%;
+    background-color: var(--fontColor);
+
+    position: absolute;
+    left: -5px;
+    top: 2px;
+}
+.exp-title,
+.edu-title,
+.qualification-title{
+    margin: 0;
+    color: black;
+    font-size: 1rem;
+}
+.exp-company,
+.edu-company{
+    margin: 0;
+    font-size: .8rem;
+}
+.exp-content ul,
+.edu-content ul{
+    margin: 0;
+}
+.exp-content ul li,
+.edu-content ul li{
+    list-style: disc;
+    font-size: .9rem;
+    text-indent: 0;
+    margin: .5rem 0;
+
+}
+.exp-content ul li:last-child,
+.edu-content ul li:last-child{
+    margin-bottom: 1rem;
+}
+
+.qualification-title{
+    margin-bottom: 1rem;
+}
+
+.myskill,
+.mylanguage{
+    border-bottom: 1px solid var(--borderColor);
+    padding-bottom: 1rem;
+}
+.myskill-beginner,
+.myskill-intermediate,
+.myskill-proficient,
+.mylanguage-beginner{
+    text-indent: 1rem;
+    position: relative;
+}
+.myskill-beginner h3,
+.myskill-intermediate h3,
+.myskill-proficient h3{
+    text-transform: capitalize;
+    margin: 1rem 0;
+    margin-bottom: .5rem;
+}
+.myskill-beginner h6,
+.myskill-intermediate h6,
+.myskill-proficient h6,
+.mylanguage-beginner h6{
+    font-size: .9rem;
+    color: var(--fontColor);
+    margin: 0;
+    margin-bottom: 5px;
+}
+.myskill-beginner div,
+.myskill-intermediate div,
+.myskill-proficient div{
+    top: 6px;
+}
+
+.myskill-intermediate-detail{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto,1fr);
+}
+.myskill-beginner h6::before{
+    content: "🔍 ";
+}
+.myskill-intermediate-detail h6::before{
+    content: "⚡️ ";
+}
+.myskill-proficient h6::before{
+    content: "💪 ";
+}
+
+
+

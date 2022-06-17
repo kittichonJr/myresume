@@ -1,0 +1,39 @@
+.title-container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 72px;
+
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    padding-left: 2.5rem;
+    border-bottom: 1px solid var(--borderColor);
+    color: black;
+}
+
+.circle-shadow{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 100%;
+    left: 30px;
+
+    opacity: .3;
+    background-image: linear-gradient(to top left, var(--lightBlue), var(--strongBlue));
+
+
+
+    z-index: 4;
+}
+.title{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+
+    z-index: 5;
+}
+.title span:first-child{
+    color: var(--strongBlue);
+}
