@@ -4,6 +4,7 @@
 @import './pages/About/About.css';
 @import './components/Title/Title.css';
 @import './pages/Resume/Resume.css';
+@import './pages/Projects/Projects.css';
 
 * , ::before, ::after{
     box-sizing: border-box;

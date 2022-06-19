@@ -4,6 +4,7 @@ import Nav from "./components/Nav/Nav";
 import Profile from "./components/Profile/Profile";
 import About from "./pages/About/About";
 import Resume from "./pages/Resume/Resume";
+import Projects from "./pages/Projects/Projects";
 
 enum Path {
   about = "about",
@@ -42,6 +43,7 @@ function App() {
       <div className="home-right-side">
         {state === Path.about && <About />}
         {state === Path.resume && <Resume />}
+        {state === Path.projects && <Projects />}
       </div>
     </section>
   );
